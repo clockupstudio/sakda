@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class Energy : MonoBehaviour
 {
-
     public float energy = 100f;
     public Text energyText;
     public GameObject gameOverText;
@@ -17,7 +16,6 @@ public class Energy : MonoBehaviour
             energy -= Time.deltaTime * 2f;
         }
 
-
         if (energy >= 0)
         {
             energyText.text = String.Format("Energy: {0:0}", energy);
@@ -25,9 +23,8 @@ public class Energy : MonoBehaviour
 
         if (energy < 0)
         {
-			GameControl.instance.gameOver = true;
+            GameControl.instance.gameOver = true;
             gameOverText.SetActive(true);
         }
-
     }
 }

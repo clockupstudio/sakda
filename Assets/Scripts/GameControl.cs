@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour {
 
@@ -18,7 +19,7 @@ public class GameControl : MonoBehaviour {
 	void Update()
 	{
 		if (gameOver && Input.GetKeyDown(KeyCode.Space)) {
-			Debug.Log("Game Over");
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		}		
 	}
 }

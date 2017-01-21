@@ -16,6 +16,10 @@ public class Sakda : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		if (GameControl.instance.gameOver) {
+			return;
+		}
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetTrigger("Attack");
