@@ -2,6 +2,7 @@
 
 public class BuildingTower : MonoBehaviour
 {
+    public AudioClip destroyedSound;
     private Animator animator;
     private bool isDestroyed = false;
     // Use this for initialization
@@ -21,6 +22,7 @@ public class BuildingTower : MonoBehaviour
             isDestroyed = true;
             animator.SetTrigger("Destroy");
             CameraControl.instance.shakeDuration = 0.04f;
+            SoundManager.instance.PlaySingle(destroyedSound);
         }
     }
 }

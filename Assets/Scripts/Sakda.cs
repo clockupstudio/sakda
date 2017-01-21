@@ -24,15 +24,18 @@ public class Sakda : MonoBehaviour
         {
             renderrer.flipX = true;
             body.velocity = new Vector2(-moveSpeed, body.velocity.y);
+            animator.SetTrigger("Walk");
         }
 
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             renderrer.flipX = false;
             body.velocity = new Vector2(moveSpeed, body.velocity.y);
+            animator.SetTrigger("Walk");
         }
         else {
             body.velocity = Vector2.zero;
+            animator.SetTrigger("Idle");
         }
     }
     void Update()
