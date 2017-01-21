@@ -5,19 +5,29 @@ using UnityEngine.UI;
 public class Energy : MonoBehaviour
 {
 
-    private float time = 100f;
+    public float energy = 100f;
     public Text energyText;
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
+    public GameObject gameOverText;
 
     // Update is called once per frame
     void Update()
     {
-        time -= Time.deltaTime * 2f;
-		energyText.text = String.Format("Energy: {0:0}", time);
+        if (energy >= 0)
+        {
+            energy -= Time.deltaTime * 2f;
+        }
+
+
+        if (energy >= 0)
+        {
+            energyText.text = String.Format("Energy: {0:0}", energy);
+        }
+
+        if (energy < 0)
+        {
+			GameControl.instance.gameOver = true;
+            gameOverText.SetActive(true);
+        }
+
     }
 }
