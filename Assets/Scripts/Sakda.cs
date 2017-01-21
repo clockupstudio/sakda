@@ -2,7 +2,7 @@
 
 public class Sakda : MonoBehaviour
 {
-    public float moveSpeed = .5f;
+    public float moveSpeed = .1f;
     private SpriteRenderer renderrer;
     private Animator animator;
 

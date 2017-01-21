@@ -20,6 +20,7 @@ public class BuildingTower : MonoBehaviour
         if (other.tag == "SakdaAttack")
         {
             animator.SetTrigger("Destroy");
+            CameraControl.instance.shakeDuration = 0.5f;
         }
     }
 }
