@@ -6,7 +6,7 @@ public class Sakda : MonoBehaviour
     private SpriteRenderer renderrer;
     private Animator animator;
     private Rigidbody2D body;
-    // Use this for initialization
+    private bool dead = false;
     void Start()
     {
         renderrer = GetComponent<SpriteRenderer>();
@@ -37,6 +37,11 @@ public class Sakda : MonoBehaviour
     }
     void Update()
     {
+        if (GameControl.instance.gameOver)
+        {
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetTrigger("Attack");
@@ -51,6 +56,10 @@ public class Sakda : MonoBehaviour
     public void StopAttack()
     {
         transform.GetChild(0).gameObject.SetActive(false);
+    }
+
+    public void Dead(){
+        animator.SetTrigger("Dead");
     }
 
 }

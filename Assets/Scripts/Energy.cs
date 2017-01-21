@@ -8,6 +8,7 @@ public class Energy : MonoBehaviour
     public Text energyText;
     public GameObject gameOverText;
 	private static Energy instance;
+	public Sakda sakda;
 
     void Awake(){
 		if (instance == null) {
@@ -32,6 +33,7 @@ public class Energy : MonoBehaviour
         {
             GameControl.instance.gameOver = true;
             gameOverText.SetActive(true);
+			sakda.Dead();
         }
     }
 }
