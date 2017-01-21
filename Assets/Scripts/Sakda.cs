@@ -6,7 +6,7 @@ public class Sakda : MonoBehaviour
     private SpriteRenderer renderrer;
     private Animator animator;
     private Rigidbody2D body;
-    private bool dead = false;
+
     void Start()
     {
         renderrer = GetComponent<SpriteRenderer>();
