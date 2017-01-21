@@ -38,4 +38,14 @@ public class Sakda : MonoBehaviour
         }
     }
 
+    public void StartAttack()
+    {
+        transform.GetChild(0).gameObject.SetActive(true);
+    }
+
+    public void StopAttack()
+    {
+        transform.GetChild(0).gameObject.SetActive(false);
+    }
+
 }
