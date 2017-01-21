@@ -1,18 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Sakda : MonoBehaviour
 {
     public float moveSpeed = .5f;
-    private Rigidbody2D body;
     private SpriteRenderer renderrer;
     private Animator animator;
 
     // Use this for initialization
     void Start()
     {
-        body = GetComponent<Rigidbody2D>();
         renderrer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
