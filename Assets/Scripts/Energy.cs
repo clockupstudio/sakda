@@ -7,8 +7,15 @@ public class Energy : MonoBehaviour
     public float energy = 100f;
     public Text energyText;
     public GameObject gameOverText;
+	private static Energy instance;
 
-    // Update is called once per frame
+    void Awake(){
+		if (instance == null) {
+			instance = this;
+		} else if (instance != this) {
+			Destroy (gameObject);
+		}
+	}
     void Update()
     {
         if (energy >= 0)
