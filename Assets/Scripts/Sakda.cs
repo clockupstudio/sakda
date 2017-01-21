@@ -5,36 +5,41 @@ public class Sakda : MonoBehaviour
     public float moveSpeed = .1f;
     private SpriteRenderer renderrer;
     private Animator animator;
-
+    private Rigidbody2D body;
     // Use this for initialization
     void Start()
     {
         renderrer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        body = GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-		if (GameControl.instance.gameOver) {
-			return;
-		}
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (GameControl.instance.gameOver)
         {
-            animator.SetTrigger("Attack");
+            return;
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             renderrer.flipX = true;
-            transform.position = (Vector2)transform.position - new Vector2(moveSpeed, 0);
+            body.velocity = new Vector2(-moveSpeed, body.velocity.y);
         }
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow))
         {
             renderrer.flipX = false;
-            transform.position = (Vector2)transform.position + new Vector2(moveSpeed, 0);
+            body.velocity = new Vector2(moveSpeed, body.velocity.y);
+        }
+        else {
+            body.velocity = Vector2.zero;
+        }
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetTrigger("Attack");
         }
     }
 
