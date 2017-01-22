@@ -6,7 +6,8 @@ public class Sakda : MonoBehaviour
     private SpriteRenderer renderrer;
     private Animator animator;
     private Rigidbody2D body;
-    public Wave wave;
+    public Wave rightWave;
+    public Wave leftWave;
 
     void Start()
     {
@@ -52,7 +53,11 @@ public class Sakda : MonoBehaviour
         }
 
         if(Input.GetKeyDown(KeyCode.Z)){
-            wave.Fire();
+            if( renderrer.flipX ){
+                leftWave.Fire();
+            }else{
+                rightWave.Fire();
+            }
         }
     }
 
