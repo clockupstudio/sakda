@@ -6,6 +6,7 @@ public class Sakda : MonoBehaviour
     private SpriteRenderer renderrer;
     private Animator animator;
     private Rigidbody2D body;
+    public Wave wave;
 
     void Start()
     {
@@ -48,6 +49,10 @@ public class Sakda : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetTrigger("Attack");
+        }
+
+        if(Input.GetKeyDown(KeyCode.Z)){
+            wave.Fire();
         }
     }
 
