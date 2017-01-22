@@ -29,6 +29,10 @@ public class Energy : MonoBehaviour
             energyText.text = String.Format("Energy: {0:0}", energy);
         }
 
+		if (energy < 10) {
+			energyText.color = Color.red;
+		}
+
         if (energy < 0)
         {
             GameControl.instance.gameOver = true;
