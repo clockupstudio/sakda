@@ -1,20 +1,15 @@
 fileFormatVersion: 2
-guid: 43b39d15295bd4c0980cb8ede3c508f8
-timeCreated: 1485061075
+guid: 8e29587b3aa754eb18c6e1673f2bad1b
+timeCreated: 1485060940
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: tower_0
-    21300002: tower_1
-    21300004: tower_2
-    21300006: tower_3
-    21300008: tower_4
-    21300010: tower_5
-    21300012: tower_6
-    21300014: tower_7
-    21300016: tower_8
-    21300018: tower_9
-    21300020: tower_10
+    21300000: building_0
+    21300002: building_1
+    21300004: building_2
+    21300006: building_3
+    21300008: building_4
+    21300010: building_5
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -105,145 +100,80 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tower_0
+      name: building_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 755
-        width: 136
-        height: 192
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 0
+        width: 132
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tower_1
+      name: building_1
       rect:
         serializedVersion: 2
-        x: 156
-        y: 755
-        width: 196
+        x: 147
+        y: 0
+        width: 193
         height: 313
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tower_2
+      name: building_2
       rect:
         serializedVersion: 2
-        x: 356
-        y: 755
-        width: 196
+        x: 350
+        y: 0
+        width: 191
         height: 313
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tower_3
+      name: building_3
       rect:
         serializedVersion: 2
-        x: 574
-        y: 757
-        width: 129
-        height: 129
+        x: 559
+        y: 0
+        width: 132
+        height: 193
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tower_4
+      name: building_4
       rect:
         serializedVersion: 2
-        x: 768
-        y: 856
-        width: 185
-        height: 140
+        x: 707
+        y: 0
+        width: 193
+        height: 95
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tower_5
+      name: building_5
       rect:
         serializedVersion: 2
-        x: 768
-        y: 768
-        width: 196
-        height: 68
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tower_6
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 630
-        width: 136
-        height: 75
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tower_7
-      rect:
-        serializedVersion: 2
-        x: 156
-        y: 628
-        width: 194
-        height: 97
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tower_8
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 630
+        x: 910
+        y: 0
         width: 193
         height: 99
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tower_9
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 11
-        width: 718
-        height: 529
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tower_10
-      rect:
-        serializedVersion: 2
-        x: 795
-        y: 7
-        width: 428
-        height: 317
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
