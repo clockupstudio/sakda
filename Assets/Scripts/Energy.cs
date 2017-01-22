@@ -7,9 +7,9 @@ public class Energy : MonoBehaviour
     public float energy = 100f;
     public Text energyText;
     public GameObject gameOverText;
-	private static Energy instance;
+	public static Energy instance;
 	public Sakda sakda;
-
+	private bool isStop = false;
     void Awake(){
 		if (instance == null) {
 			instance = this;
@@ -19,7 +19,11 @@ public class Energy : MonoBehaviour
 	}
     void Update()
     {
-        if (energy >= 0)
+    	if( isStop ){
+			return;
+		}
+
+		if (energy >= 0)
         {
             energy -= Time.deltaTime * 2f;
         }
@@ -40,4 +44,7 @@ public class Energy : MonoBehaviour
 			sakda.Dead();
         }
     }
+	public void Stop(){
+		isStop = true;
+	}
 }
