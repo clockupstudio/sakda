@@ -23,6 +23,7 @@ public class BuildingTower : MonoBehaviour
             animator.SetTrigger("Destroy");
             CameraControl.instance.shakeDuration = 0.04f;
             SoundManager.instance.PlaySingle(destroyedSound);
+            GameControl.instance.DecreaseBuidingCount();
         }
     }
 }
