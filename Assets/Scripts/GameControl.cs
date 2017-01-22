@@ -7,7 +7,7 @@ public class GameControl : MonoBehaviour
 {
 
     public static GameControl instance;
-    public int buildingCount = 10;
+    public int buildingCount = 6;
     public Text buildingCountText;
     public GameObject gameClearedText;
     public bool gameOver = false;
