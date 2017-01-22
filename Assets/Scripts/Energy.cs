@@ -47,4 +47,7 @@ public class Energy : MonoBehaviour
 	public void Stop(){
 		isStop = true;
 	}
+	public void Increase(int amount){
+		energy += amount;
+	}
 }
