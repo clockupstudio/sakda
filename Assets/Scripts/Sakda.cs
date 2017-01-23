@@ -42,13 +42,6 @@ public class Sakda : MonoBehaviour
             body.velocity = Vector2.zero;
             animator.SetTrigger("Idle");
         }
-    }
-    void Update()
-    {
-        if (GameControl.instance.gameOver)
-        {
-            return;
-        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -72,12 +65,10 @@ public class Sakda : MonoBehaviour
     {
         if (renderrer.flipX)
         {
-            Debug.Log("Left");
             leftAttack.gameObject.SetActive(true);
         }
         else
         {
-            Debug.Log("Right");
             rightAttack.gameObject.SetActive(true);
         }
     }
