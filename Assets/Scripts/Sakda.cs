@@ -10,6 +10,7 @@ public class Sakda : MonoBehaviour
     public Wave leftWave;
     public GameObject rightAttack;
     public GameObject leftAttack;
+    public AudioClip deadSound;
 
     void Start()
     {
@@ -88,6 +89,7 @@ public class Sakda : MonoBehaviour
     public void Dead()
     {
         animator.SetTrigger("Dead");
+        SoundManager.instance.PlaySingle(deadSound);
     }
 
 }

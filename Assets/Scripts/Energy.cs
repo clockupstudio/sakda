@@ -7,6 +7,7 @@ public class Energy : MonoBehaviour
     public float energy = 100f;
     public Text energyText;
     public GameObject gameOverText;
+	public AudioClip alertSound;
 	public static Energy instance;
 	public Sakda sakda;
 	private bool isStop = false;
@@ -17,9 +18,9 @@ public class Energy : MonoBehaviour
 			Destroy (gameObject);
 		}
 	}
-    void Update()
+    void FixedUpdate()
     {
-    	if( isStop ){
+    	if( isStop || GameControl.instance.gameOver ){
 			return;
 		}
 
@@ -30,7 +31,8 @@ public class Energy : MonoBehaviour
 
         if (energy >= 0)
         {
-            energyText.text = String.Format("Energy: {0:0}", energy);
+            energyText.color = Color.white;
+			energyText.text = String.Format("Energy: {0:0}", energy);
         }
 
 		if (energy < 10) {
