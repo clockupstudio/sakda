@@ -8,6 +8,8 @@ public class Sakda : MonoBehaviour
     private Rigidbody2D body;
     public Wave rightWave;
     public Wave leftWave;
+    public GameObject rightAttack;
+    public GameObject leftAttack;
 
     void Start()
     {
@@ -35,7 +37,8 @@ public class Sakda : MonoBehaviour
             body.velocity = new Vector2(moveSpeed, body.velocity.y);
             animator.SetTrigger("Walk");
         }
-        else {
+        else
+        {
             body.velocity = Vector2.zero;
             animator.SetTrigger("Idle");
         }
@@ -52,10 +55,14 @@ public class Sakda : MonoBehaviour
             animator.SetTrigger("Attack");
         }
 
-        if(Input.GetKeyDown(KeyCode.Z)){
-            if( renderrer.flipX ){
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            if (renderrer.flipX)
+            {
                 leftWave.Fire();
-            }else{
+            }
+            else
+            {
                 rightWave.Fire();
             }
         }
@@ -63,15 +70,32 @@ public class Sakda : MonoBehaviour
 
     public void StartAttack()
     {
-        transform.GetChild(0).gameObject.SetActive(true);
+        if (renderrer.flipX)
+        {
+            Debug.Log("Left");
+            leftAttack.gameObject.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("Right");
+            rightAttack.gameObject.SetActive(true);
+        }
     }
 
     public void StopAttack()
     {
-        transform.GetChild(0).gameObject.SetActive(false);
+        if (renderrer.flipX)
+        {
+            leftAttack.gameObject.SetActive(false);
+        }
+        else
+        {
+            rightAttack.gameObject.SetActive(false);
+        }
     }
 
-    public void Dead(){
+    public void Dead()
+    {
         animator.SetTrigger("Dead");
     }
 
