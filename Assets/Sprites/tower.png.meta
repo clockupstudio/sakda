@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 43b39d15295bd4c0980cb8ede3c508f8
-timeCreated: 1485069055
+timeCreated: 1485177411
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -17,6 +17,7 @@ TextureImporter:
     21300020: tower_10
     21300022: tower_11
     21300024: tower_12
+    21300026: tower_13
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -270,6 +271,19 @@ TextureImporter:
         y: 653
         width: 49
         height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tower_13
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 500
+        width: 272
+        height: 182
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
